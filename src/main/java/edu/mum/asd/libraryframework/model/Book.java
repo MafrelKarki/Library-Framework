@@ -69,6 +69,7 @@ public class Book extends AItem {
 		ItemCopy itemCopy= new ItemCopy();
 		itemCopy.setCopyID("Copy"+i);
 		itemCopy.setItem((Book)this.doCopy());
+		itemCopy.setAvailable(true);
 		this.itemCopies.add(itemCopy);
 		
 

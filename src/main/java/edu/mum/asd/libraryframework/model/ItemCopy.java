@@ -19,6 +19,14 @@ public class ItemCopy implements IItemCopy  {
 		return_Date = new Date();
 		this.lone = new Loan(ck_Out_Date, return_Date);
 	}
+	
+
+	public ItemCopy(Date ck_Out_Date, Date return_Date) {
+		super();
+		this.ck_Out_Date = ck_Out_Date;
+		this.return_Date = return_Date;
+	}
+
 
 	public String getCopyID() {
 		return copyID;

@@ -1,15 +1,15 @@
 package edu.mum.asd.libraryframework.model;
 
+import java.util.Date;
 
-
-public class Magazine extends AItem {
+public class CD extends AItem {
 	
 	private int limit;
-	private int issue;
-	public Magazine(String title,int limit,int issue) {
+	private int year;
+	public CD(String title,int limit,int year) {
 		super(title);
 		this.limit=limit;
-		this.issue=issue;
+		this.year=year;
 	}
 
 	
@@ -21,13 +21,13 @@ public class Magazine extends AItem {
 	}
 
 	public int getIssue() {
-		return issue;
+		return year;
 	}
 
 
 
 	public void setIssue(int issue) {
-		this.issue = issue;
+		this.year = issue;
 	}
 
 
@@ -42,9 +42,9 @@ public class Magazine extends AItem {
 	public void addCopies(int copyNo)
 	{
 		for (int i = 0; i < copyNo; i++) {
-		ItemCopy itemCopy= new ItemCopy();
+		ItemCopy itemCopy= new ItemCopy(new Date(),new Date());
 		itemCopy.setCopyID("Copy"+i);
-		itemCopy.setItem((Magazine)this.doCopy());
+		itemCopy.setItem((CD)this.doCopy());
 		itemCopy.setAvailable(true);
 		this.itemCopies.add(itemCopy);
 		
@@ -57,17 +57,20 @@ public class Magazine extends AItem {
 	
 	public Object doCopy()  {
 		// TODO Auto-generated method stub
-		Object magazine=  new Magazine(this.title, this.limit,this.issue);
-		return magazine;
+		CD cd=  new CD(this.title, this.limit,this.year);
+		return cd;
 	}
 
 
 
 	@Override
 	public String toString() {
-		return "Magazine [limit=" + limit + ", issue=" + issue + ", title=" + title + ", itemCopies=" + itemCopies
-				+ "]\n";
+		return "\n CD [limit=" + limit + ", year=" + year + ", title=" + title + ", itemCopies=" + itemCopies + "]";
 	}
+
+
+
+	
 
 
 

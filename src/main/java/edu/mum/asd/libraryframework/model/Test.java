@@ -11,7 +11,11 @@ public class Test {
 		Author author=new Author("Mafrel", "Karki");
 		book1.addAuthors(author);
 		book1.addCopies(3);
-         System.err.println(book1);		
+         System.out.println(book1);	
+         
+         CD cd= new CD("Love Don't Cast a Thing", 2, 1990);
+         cd.addCopies(4);
+         System.out.println(cd);
 		
 	  
 	}
