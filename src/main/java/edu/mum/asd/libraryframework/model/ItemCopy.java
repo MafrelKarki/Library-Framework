@@ -1,8 +1,9 @@
 package edu.mum.asd.libraryframework.model;
 
+
 import java.util.Date;
 
-public class ItemCopy implements IItemCopy {
+public class ItemCopy implements IItemCopy  {
 
 	private String copyID;
 	private boolean available;
@@ -35,12 +36,8 @@ public class ItemCopy implements IItemCopy {
 		this.available = available;
 	}
 
-	// ** Things to be Discussed here, book or Magazine
-	public IItem doClone() {
-		return null;
-		// Check its available before copying..
-		// IItem itemCopy = item.clone();
-	}
+	
+	
 
 	public Loan getLone() {
 		return lone;
@@ -73,5 +70,16 @@ public class ItemCopy implements IItemCopy {
 	public void setReturn_Date(Date return_Date) {
 		this.return_Date = return_Date;
 	}
+
+
+	
+
+	@Override
+	public String toString() {
+		return "ItemCopy [copyID=" + copyID + ", available=" + available + ", lone=" + lone + ", item=" + item
+				+ ", ck_Out_Date=" + ck_Out_Date + ", return_Date=" + return_Date + "]";
+	}
+	
+	
 
 }
