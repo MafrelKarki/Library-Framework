@@ -1,8 +1,25 @@
 package edu.mum.asd.libraryframework.model;
 
 public class Test {
+	
+	private int test;
+	private String testTest;
+	public int getTest() {
+		return test;
+	}
+	public void setTest(int test) {
+		this.test = test;
+	}
+	public String getTestTest() {
+		return testTest;
+	}
+	public void setTestTest(String testTest) {
+		this.testTest = testTest;
+	}
+	
+	
 
-	public static void main(String[] args) throws CloneNotSupportedException {
+	/*public static void main(String[] args) throws CloneNotSupportedException {
 		Magazine book= new Magazine("abebe",7, 10);
 	     book.addCopies(3);
 		System.out.println(book);
@@ -19,5 +36,5 @@ public class Test {
 		
 	  
 	}
-
+*/
 }

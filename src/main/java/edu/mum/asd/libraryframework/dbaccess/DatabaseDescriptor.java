@@ -15,11 +15,12 @@ public class DatabaseDescriptor {
 	private String username;
 	private String password;
 
-	public DatabaseDescriptor(String dbmsName, String serverIP, int portNo, String username, String password) {
+	public DatabaseDescriptor(String dbmsName, String serverIP, int portNo, String databaseName, String username, String password) {
 		super();
 		this.dbmsName = dbmsName;
 		this.serverIP = serverIP;
 		this.portNo = portNo;
+		this.databaseName=databaseName;
 		this.username = username;
 		this.password = password;
 	}
