@@ -1,8 +1,12 @@
 package edu.mum.asd.libraryframework.model;
 
 import java.util.Date;
+import java.util.List;
+
+import edu.mum.asd.libraryframework.dao.UserDao;
 
 public class User{
+	
 
 	private long userId;
 	private String firstName;
@@ -112,5 +116,7 @@ public class User{
 				+ reservationEligibility + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + ", approvedBy="
 				+ approvedBy + "]";
 	}
+
+
 
 }

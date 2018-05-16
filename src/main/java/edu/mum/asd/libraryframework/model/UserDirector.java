@@ -8,9 +8,9 @@ import java.util.Date;
  * Director of builder pattern
  */
 public class UserDirector {
-	private NewUserBuilder userBuilder;
+	private NewUserBuilder userBuilder = null;
 
-	public UserDirector(NewUserBuilder userBUilder) {
+	public UserDirector(NewUserBuilder userBuilder) {
 		this.userBuilder = userBuilder;
 	}
 

@@ -2,12 +2,12 @@ package edu.mum.asd.libraryframework.model;
 
 import java.util.Date;
 
-public class Resrevation {
+public class Reservation {
 
 
 	private Date reservation_Date;
 	private IItem item;
-	public Resrevation() {
+	public Reservation() {
 		
 	}
 	public Date getReservation_Date() {
