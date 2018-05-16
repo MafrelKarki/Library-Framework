@@ -1,11 +1,10 @@
 package edu.mum.asd.libraryframework.model;
 
-
-
 public class Magazine extends AItem {
 	
 	private int limit;
 	private int issue;
+	
 	public Magazine(String title,int limit,int issue) {
 		super(title);
 		this.limit=limit;

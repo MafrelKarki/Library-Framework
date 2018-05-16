@@ -20,7 +20,7 @@ public class AuthorDao {
 	public void delete(int id) {
 		String query = "DELETE FROM authors WHERE id=?";
 		QueryExecutor qex = new QueryExecutor();
-		qex.insert(query, id);
+		qex.delete(query, id);
 		qex.close();
 	}
 
