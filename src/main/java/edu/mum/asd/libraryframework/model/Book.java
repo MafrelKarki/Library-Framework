@@ -6,8 +6,9 @@ import java.util.List;
 public class Book extends AItem {
 	
 	private int limit;
-	private List<Author> authors;
 	private String ISBN;
+	private List<Author> authors;
+
 	public Book(String title,int limit,String isbn) {
 		super(title);
 		this.limit=limit;
