@@ -2,6 +2,11 @@ package edu.mum.asd.libraryframework.model;
 
 import java.util.Date;
 
+
+/**
+ * @author Mafrel
+ * Director of builder pattern
+ */
 public class UserDirector {
 	private NewUserBuilder userBuilder;
 
