@@ -1,5 +1,6 @@
 package edu.mum.asd.libraryframework.dbaccess;
 
+import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
@@ -9,7 +10,7 @@ import java.sql.SQLException;
 
 public interface IDbmsConnection {
 
-	public void connect() throws SQLException, ClassNotFoundException;
+	public Connection connect() throws SQLException, ClassNotFoundException;
 
 	public void disconnect() throws SQLException, ClassNotFoundException;
 }
