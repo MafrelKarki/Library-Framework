@@ -1,7 +1,6 @@
 package edu.mum.asd.libraryframework.model;
 
-
-
+import java.util.Date;
 
 public class Test {
 	
@@ -28,7 +27,7 @@ public class Test {
 		System.out.println(book);
 		
 		Book book1= new Book("Les Mesarable", 7, "123");
-		Author author=new Author("Mafrel", "Karki");
+		Author author=new Author(12,"Mafrel", "Karki", new Date(), "here");
 		book1.addAuthors(author);
 		book1.addCopies(3);
          System.out.println(book1);	
@@ -38,7 +37,7 @@ public class Test {
          System.out.println(cd);
          Magazine magazine= new Magazine("WCNC", 8, 7878);
          System.out.println(magazine);
-          Resrevation resrevation= new Resrevation();
+          Reservation resrevation= new Reservation();
           resrevation.setItem(cd);
           System.out.println(resrevation.CheckAvailability());  
           resrevation.setItem(magazine);

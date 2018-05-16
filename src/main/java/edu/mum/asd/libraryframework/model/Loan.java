@@ -5,7 +5,6 @@ import java.util.Date;
 public class Loan {
 	private Date ck_Out_Date;
 	private Date return_Date;
-	private LoanState loanState;
 	private IItemCopy itemCopy;
 
 	public Loan(Date ck_Out_Date, Date return_Date) {

@@ -11,6 +11,10 @@ public class NewUserBuilder implements IUserBuilder {
 
 	private User user;
 
+	public NewUserBuilder() {
+		user = new User();
+	}
+
 	@Override
 	public void buildUserNamingInfo(String firstName, String lastName) {
 		user.setFirstName(firstName);
@@ -33,7 +37,7 @@ public class NewUserBuilder implements IUserBuilder {
 	public void buildUserPassword(String password) {
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		user.setPassword(passwordEncoder.encode(password));
-//		user.setPassword("abcde");
+		// user.setPassword("abcde");
 	}
 
 	@Override
@@ -51,6 +55,5 @@ public class NewUserBuilder implements IUserBuilder {
 	public User getUser() {
 		return this.user;
 	}
-
 
 }

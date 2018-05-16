@@ -1,2 +1,2 @@
-<%@ include file="./header.jsp" %>
-<h1>Inside Homepage</h1>
+<%-- <%@ include file="./header.jsp" %>
+<h1>Inside Homepage</h1> --%>
