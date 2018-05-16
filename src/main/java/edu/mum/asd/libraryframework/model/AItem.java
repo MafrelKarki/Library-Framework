@@ -18,4 +18,21 @@ public abstract class AItem implements IItem {
 
 	public abstract Object doCopy();
 
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public List<IItemCopy> getItemCopies() {
+		return itemCopies;
+	}
+
+	public void setItemCopies(List<IItemCopy> itemCopies) {
+		this.itemCopies = itemCopies;
+	}
+	
+
 }

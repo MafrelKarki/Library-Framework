@@ -1,7 +1,6 @@
 package edu.mum.asd.libraryframework.model;
 
-
-
+import java.util.Date;
 
 public class Test {
 	
@@ -28,7 +27,7 @@ public class Test {
 		System.out.println(book);
 		
 		Book book1= new Book("Les Mesarable", 7, "123");
-		Author author=new Author("Mafrel", "Karki");
+     	Author author=new Author(1, "Mafrel", "Karki", new Date(), "I won DV");
 		book1.addAuthors(author);
 		book1.addCopies(3);
          System.out.println(book1);	
