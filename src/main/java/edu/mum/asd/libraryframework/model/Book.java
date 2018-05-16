@@ -15,8 +15,15 @@ public class Book extends AItem {
 		this.ISBN=isbn;
 		authors=new ArrayList<>();
 	}
-
 	
+	
+
+	public Book(String title) {
+		super(title);
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 	@Override
 	public boolean  checkAvailability() {
