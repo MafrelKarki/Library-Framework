@@ -8,6 +8,7 @@ import java.util.List;
 import edu.mum.asd.libraryframework.dbaccess.QueryExecutor;
 import edu.mum.asd.libraryframework.model.Author;
 
+
 public class AuthorDao {
 
 	public void create(Author author) {
@@ -20,7 +21,7 @@ public class AuthorDao {
 	public void delete(int id) {
 		String query = "DELETE FROM authors WHERE id=?";
 		QueryExecutor qex = new QueryExecutor();
-		qex.insert(query, id);
+		qex.delete(query, id);
 		qex.close();
 	}
 
@@ -61,4 +62,6 @@ public class AuthorDao {
 		}
 		return authors;
 	}
+
+	
 }
