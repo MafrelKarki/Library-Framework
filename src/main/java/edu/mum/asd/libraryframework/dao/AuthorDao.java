@@ -8,6 +8,7 @@ import java.util.List;
 import edu.mum.asd.libraryframework.dbaccess.QueryExecutor;
 import edu.mum.asd.libraryframework.model.Author;
 
+
 public class AuthorDao {
 
 	public void create(Author author) {
@@ -61,4 +62,6 @@ public class AuthorDao {
 		}
 		return authors;
 	}
+
+	
 }
