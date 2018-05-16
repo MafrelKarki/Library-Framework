@@ -25,6 +25,7 @@ public class ItemCopy implements IItemCopy  {
 		super();
 		this.ck_Out_Date = ck_Out_Date;
 		this.return_Date = return_Date;
+		
 	}
 
 

@@ -1,5 +1,8 @@
 package edu.mum.asd.libraryframework.model;
 
+
+
+
 public class Test {
 	
 	private int test;
@@ -19,7 +22,7 @@ public class Test {
 	
 	
 
-	/*public static void main(String[] args) throws CloneNotSupportedException {
+	public static void main(String[] args) throws CloneNotSupportedException {
 		Magazine book= new Magazine("abebe",7, 10);
 	     book.addCopies(3);
 		System.out.println(book);
@@ -33,8 +36,16 @@ public class Test {
          CD cd= new CD("Love Don't Cast a Thing", 2, 1990);
          cd.addCopies(4);
          System.out.println(cd);
+         Magazine magazine= new Magazine("WCNC", 8, 7878);
+         System.out.println(magazine);
+          Resrevation resrevation= new Resrevation();
+          resrevation.setItem(cd);
+          System.out.println(resrevation.CheckAvailability());  
+          resrevation.setItem(magazine);
+          System.out.println(resrevation.CheckAvailability());  
+          
 		
 	  
 	}
-*/
+
 }

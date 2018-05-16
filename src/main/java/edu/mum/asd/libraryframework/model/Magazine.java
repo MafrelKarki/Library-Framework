@@ -12,7 +12,11 @@ public class Magazine extends AItem {
 		this.issue=issue;
 	}
 
-	
+	public Magazine(String title) {
+		super(title);
+		
+	}
+
 
 	@Override
 	public boolean  checkAvailability() {

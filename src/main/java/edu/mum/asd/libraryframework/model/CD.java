@@ -12,7 +12,10 @@ public class CD extends AItem {
 		this.year=year;
 	}
 
-	
+	public CD(String title) {
+		super(title);
+		
+	}
 
 	@Override
 	public boolean  checkAvailability() {
