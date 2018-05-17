@@ -4,14 +4,18 @@ package edu.mum.asd.libraryframework.model;
 import java.util.Date;
 
 public class ItemCopy implements IItemCopy  {
-
-	private String copyID;
+    
+  
+	private int copyID;
 	private boolean available;
 	private Loan lone;
 	private IItem item;
 
 	private Date ck_Out_Date;
 	private Date return_Date;
+
+
+
 
 	public ItemCopy() {
 		super();
@@ -20,6 +24,16 @@ public class ItemCopy implements IItemCopy  {
 		this.lone = new Loan(ck_Out_Date, return_Date);
 	}
 	
+	
+
+	public ItemCopy(int copyID, boolean available) {
+		super();
+		this.copyID = copyID;
+		this.available = available;
+		
+	}
+
+
 
 	public ItemCopy(Date ck_Out_Date, Date return_Date) {
 		super();
@@ -29,11 +43,11 @@ public class ItemCopy implements IItemCopy  {
 	}
 
 
-	public String getCopyID() {
+	public int getCopyID() {
 		return copyID;
 	}
 
-	public void setCopyID(String copyID) {
+	public void setCopyID(int copyID) {
 		this.copyID = copyID;
 	}
 

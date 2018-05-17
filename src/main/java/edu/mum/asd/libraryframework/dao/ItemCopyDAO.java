@@ -6,41 +6,43 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.mum.asd.libraryframework.dbaccess.QueryExecutor;
-import edu.mum.asd.libraryframework.model.Author;
+import edu.mum.asd.libraryframework.model.ItemCopy;
 
 
-public class AuthorDao {
 
-	public void create(Author author) {
-		String query = "INSERT INTO authors (copyId, available, dateofbirth,biography) VALUES(?,?,?,?)";
+public class ItemCopyDAO {
+
+	
+	public void create(ItemCopy itemCopy) {
+		String query = "INSERT INTO itemcopy (copyID, available, ItemId) VALUES(?,?,?,?)";
 		QueryExecutor qex = new QueryExecutor();
-		qex.insert(query, author.getFirstName(), author.getLastName(), author.getDateOfBirth(), author.getBiography());
+		qex.insert(query, itemCopy.getCopyID(), itemCopy.isAvailable(), itemCopy.getItem().getID());
 		qex.close();
 	}
 	
-	public void delete(int id) {
-		String query = "DELETE FROM authors WHERE id=?";
+	public void delete(int Copyid) {
+		String query = "DELETE FROM itemcopy WHERE id=?";
 		QueryExecutor qex = new QueryExecutor();
-		qex.delete(query, id);
+		qex.delete(query, Copyid);
 		qex.close();
 	}
 
 
-	public void update(Author author) {
-		String query = "UPDATE authors SET firstName=?, lastName=?, dateOfBirth=?, biography=? WHERE id=?"; 
+	public void update(ItemCopy itemCopy) {
+		String query = "UPDATE itemcopy SET  copyID=?, available=?, ItemID=? WHERE id=?"; 
 		QueryExecutor qex = new QueryExecutor();
-		qex.update(query, author.getFirstName(), author.getLastName(), author.getDateOfBirth(), author.getBiography(), author.getId());
+		qex.update(query, itemCopy.getCopyID(),itemCopy.isAvailable(), itemCopy.getItem().getID());
 		qex.close();
 	}
 	
-	public Author find(int authorID) {
-		String query = "SELECT * FROM authors WHERE id=?";
+	public ItemCopy find(int id) {
+		String query = "SELECT * FROM itemcopy WHERE id=?";
 		QueryExecutor qex = new QueryExecutor();
-		ResultSet rs = qex.getData(query, authorID);
-		Author author = null;
+		ResultSet rs = qex.getData(query, id);
+		ItemCopy itemCopy = null;
 		try {
 			if (rs.next()) {
-				author = new Author(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDate(4), rs.getString(5));
+				itemCopy = new ItemCopy(rs.getInt(1), rs.getBoolean(2));
 			}
 		} catch (SQLException sqlex) {
 			System.out.println(sqlex);
@@ -63,5 +65,4 @@ public class AuthorDao {
 		return authors;
 	}
 
-	
 }

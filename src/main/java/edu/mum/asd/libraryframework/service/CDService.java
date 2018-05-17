@@ -25,7 +25,7 @@ public class CDService  {
 
 	}
 
-	@Override
+	
 	public void delete(IItem item) {
 		CD cd=(CD) item;
 		String query = "DELETE FROM magazines WHERE title=?";
@@ -35,7 +35,7 @@ public class CDService  {
 
 	}
 
-	@Override
+	
 	public IItem find(IItem item) {
 		CD cd=(CD) item;
 		String query = "SELECT * FROM cds WHERE title=?";
@@ -54,7 +54,7 @@ public class CDService  {
 
 	}
 
-	@Override
+	
 	public void update(IItem item) {
 		CD cd=(CD) item;
 		String query = "UPDATE cd SET title=?, ISSSUE=?,copies=?,Maxdays=? WHERE tilte=?"; 

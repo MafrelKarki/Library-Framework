@@ -6,6 +6,8 @@ import java.util.List;
 public abstract class AItem implements IItem {
 
 	protected String title;
+	private int id;
+	
 
 	protected List<IItemCopy> itemCopies;
 
@@ -34,5 +36,12 @@ public abstract class AItem implements IItem {
 	public abstract boolean checkAvailability();
 
 	public abstract Object doCopy();
+
+	@Override
+	public int getID() {
+		// TODO Auto-generated method stub
+		return id;
+	}
+	
 
 }

@@ -46,7 +46,7 @@ public class Magazine extends AItem {
 	{
 		for (int i = 0; i < copyNo; i++) {
 		ItemCopy itemCopy= new ItemCopy();
-		itemCopy.setCopyID("Copy"+i);
+		itemCopy.setCopyID(i);
 		itemCopy.setItem((Magazine)this.doCopy());
 		itemCopy.setAvailable(true);
 		this.itemCopies.add(itemCopy);

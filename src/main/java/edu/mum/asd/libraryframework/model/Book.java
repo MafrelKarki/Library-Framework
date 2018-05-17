@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Book extends AItem {
-
+   
+	private int id;
 	private int limit;
 	private String ISBN;
 	private List<Author> authors;
@@ -57,7 +58,7 @@ public class Book extends AItem {
 	public void addCopies(int copyNo) {
 		for (int i = 0; i < copyNo; i++) {
 			ItemCopy itemCopy = new ItemCopy();
-			itemCopy.setCopyID("Copy" + i);
+			itemCopy.setCopyID(i);
 			itemCopy.setItem((Book) this.doCopy());
 			itemCopy.setAvailable(true);
 			this.itemCopies.add(itemCopy);
@@ -75,5 +76,7 @@ public class Book extends AItem {
 		return "Book [limit=" + limit + ", authors=" + authors + ", ISBN=" + ISBN + ", title=" + title + ", itemCopies="
 				+ itemCopies + "]";
 	}
+
+	
 
 }

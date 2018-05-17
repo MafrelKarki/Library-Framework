@@ -5,5 +5,6 @@ public interface IItem {
 	public Object doCopy();
 
 	public boolean checkAvailability();
+	public int getID();
 
 }
