@@ -5,7 +5,7 @@ CREATE TABLE `libraryframework`.`user` (
   `lastname` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
   `phone` VARCHAR(45) NULL,
-  `password` VARCHAR(45) NULL,
+  `password` VARCHAR(125) NULL,
   `address` VARCHAR(125) NULL,
   `eligibility` TINYINT(1) NULL,
   `approvedBy` INT NULL,
