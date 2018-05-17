@@ -28,4 +28,16 @@ public class DAOFactoryImpl implements IDAOFactory{
 		return new AuthorDao();
 	}
 
+	@Override
+	public ReservationDao getReservationDAO() {
+		// TODO Auto-generated method stub
+		return new ReservationDao();
+	}
+
+	@Override
+	public UserDao getUserDAO() {
+		// TODO Auto-generated method stub
+		return new UserDao();
+	}
+
 }
