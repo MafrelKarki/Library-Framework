@@ -10,12 +10,12 @@ import edu.mum.asd.libraryframework.model.UserDirector;
 
 public class Test {
 	public static void main(String...args) {
-//		Author a=new AuthorDao().find(4);
+//		Author a=new AuthorService().find(4);
 //		a.setBiography("BBB  IIII");
 //		a.setDateOfBirth(new Date());
 //		a.setLastName("KARKI");
 //		a.setFirstName("MAFREL");
-//		new AuthorDao().delete(a.getId());
+//		new AuthorService().delete(a.getId());
 		
 		NewUserBuilder builder = new NewUserBuilder();
 		UserDirector director = new UserDirector(builder);
