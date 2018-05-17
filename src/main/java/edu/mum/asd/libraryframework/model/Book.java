@@ -4,57 +4,47 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Book extends AItem {
-	
+
 	private int limit;
-	private List<Author> authors;
 	private String ISBN;
-	public Book(String title,int limit,String isbn) {
+	private List<Author> authors;
+
+	public Book(String title, int limit, String isbn) {
 		super(title);
-		this.limit=limit;
-		this.ISBN=isbn;
-		authors=new ArrayList<>();
+		this.limit = limit;
+		this.ISBN = isbn;
+		authors = new ArrayList<>();
 	}
 
-	
+	public Book(String title) {
+		super(title);
+	}
 
 	@Override
-	public boolean  checkAvailability() {
-		return (this.itemCopies.size()>0);
-		
+	public boolean checkAvailability() {
+		return (this.itemCopies.size() > 0);
+
 	}
-
-	
-
 
 	public List<Author> getAuthors() {
 		return authors;
 	}
 
-
-
 	public void addAuthors(Author author) {
-		authors.add( author);
+		authors.add(author);
 	}
-
-
 
 	public String getISBN() {
 		return ISBN;
 	}
 
-
-
 	public void setAuthors(List<Author> authors) {
 		this.authors = authors;
 	}
 
-
-
 	public void setISBN(String iSBN) {
 		ISBN = iSBN;
 	}
-
-
 
 	public int getLimit() {
 		return limit;
@@ -63,30 +53,22 @@ public class Book extends AItem {
 	public void setLimit(int limit) {
 		this.limit = limit;
 	}
-	public void addCopies(int copyNo)
-	{
+
+	public void addCopies(int copyNo) {
 		for (int i = 0; i < copyNo; i++) {
-		ItemCopy itemCopy= new ItemCopy();
-		itemCopy.setCopyID("Copy"+i);
-		itemCopy.setItem((Book)this.doCopy());
-		itemCopy.setAvailable(true);
-		this.itemCopies.add(itemCopy);
-		
-
-
+			ItemCopy itemCopy = new ItemCopy();
+			itemCopy.setCopyID("Copy" + i);
+			itemCopy.setItem((Book) this.doCopy());
+			itemCopy.setAvailable(true);
+			this.itemCopies.add(itemCopy);
 		}
 	}
 
-
-	
-	public Object doCopy()  {
-		// TODO Auto-generated method stub
-		Book book=  new Book(this.title, this.limit,this.ISBN);
-		  book.setAuthors(getAuthors());
+	public Object doCopy() {
+		Book book = new Book(this.title, this.limit, this.ISBN);
+		book.setAuthors(getAuthors());
 		return book;
 	}
-
-
 
 	@Override
 	public String toString() {
@@ -94,20 +76,4 @@ public class Book extends AItem {
 				+ itemCopies + "]";
 	}
 
-
-
-	
-
-
-
-	
-
-
-
-	
-	
-
-
-
-	
 }

@@ -69,6 +69,7 @@ public class QueryExecutor {
                     } else if (values[i] instanceof Integer) {
                         st.setInt(i + 1, (Integer) values[i]);
                     } else if (values[i] instanceof java.util.Date) {
+                    	System.out.println();
                         st.setDate(i + 1, new java.sql.Date(((java.util.Date) values[i]).getTime()));
                     } else if (values[i] instanceof Double) {
                         st.setDouble(i + 1, (Double) values[i]);
