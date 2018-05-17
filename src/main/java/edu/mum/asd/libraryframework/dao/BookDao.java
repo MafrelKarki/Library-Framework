@@ -65,7 +65,7 @@ public class BookDao implements IItemDAO {
 	@Override
 	public IItem find(IItem item) {
 		Book book=(Book)item;
-		return find(book);
+		return find(book.getTitle());
 		
 		
 	}
