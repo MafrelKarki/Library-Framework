@@ -14,7 +14,7 @@ import java.util.Properties;
 public class MysqlConnector implements IDbmsConnection {
 
 	private Connection connect;
-	private DatabaseDescriptor DB_DESC = new DatabaseDescriptor("mysql", "localhost", 3307, "libraryframework", "root", "root");
+	private DatabaseDescriptor DB_DESC = new DatabaseDescriptor("mysql", "localhost", 3306, "libraryframework", "root", "root");
 
 	public Connection connect() throws SQLException, ClassNotFoundException {
 		Properties connectionProps = new Properties();
